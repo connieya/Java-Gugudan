@@ -31,18 +31,30 @@ public class Gugudan {
 //		  }
 		 
 		
-		System.out.println("구구단 중 출력할 단은? :");
+//		System.out.println("구구단 중 출력할 단은? :");
+//		Scanner scanner = new Scanner(System.in);
+//		int number = scanner.nextInt();
+//		if(number >=2 && number <=9) {
+//		int i=1;
+//		while(i<10) {
+//			System.out.println(number+"*"+i+"="+number*i);
+//			i++;
+//		}
+//		}else {
+//			System.out.println("2이상 9이하 숫자만 입력 가능합니다.");
+//		}
+		
+		System.out.println("구구단 중 출력할 단은 ?  ");
+		int result [] =new int[9];
 		Scanner scanner = new Scanner(System.in);
 		int number = scanner.nextInt();
-		if(number >=2 && number <=9) {
-		int i=1;
-		while(i<10) {
-			System.out.println(number+"*"+i+"="+number*i);
-			i++;
+		for(int i=0; i<result.length; i++) {
+			result[i] = number * (i+1);
+			System.out.println(number+"*"+(i+1)+"="+result[i] );
+			
 		}
-		}else {
-			System.out.println("2이상 9이하 숫자만 입력 가능합니다.");
-		}
+		
+		
 		
 //		
 //		for(int i=2; i<10; i++)
