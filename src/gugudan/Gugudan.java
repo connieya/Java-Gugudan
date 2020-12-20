@@ -44,15 +44,15 @@ public class Gugudan {
 //			System.out.println("2이상 9이하 숫자만 입력 가능합니다.");
 //		}
 		
-		System.out.println("구구단 중 출력할 단은 ?  ");
-		int result [] =new int[9];
-		Scanner scanner = new Scanner(System.in);
-		int number = scanner.nextInt();
-		for(int i=0; i<result.length; i++) {
-			result[i] = number * (i+1);
-			System.out.println(number+"*"+(i+1)+"="+result[i] );
-			
-		}
+//		System.out.println("구구단 중 출력할 단은 ?  ");
+//		int result [] =new int[9];
+//		Scanner scanner = new Scanner(System.in);
+//		int number = scanner.nextInt();
+//		for(int i=0; i<result.length; i++) {
+//			result[i] = number * (i+1);
+//			System.out.println(number+"*"+(i+1)+"="+result[i] );
+//			
+//		}
 		
 		
 		
@@ -63,7 +63,30 @@ public class Gugudan {
 //		}
 
 		
+		calculate(5);
+		calculate(6);
 	}
 	
+	public static int[] calculate(int times) {
+		int result[] = new int[9];
+		for(int i=0; i<result.length; i++) {
+			result[i] = times * (i+1);
+			System.out.println(result[i]);
+		}
+		
+		return result;
+		
+	}
+	
+//	public static int calculate(int times) {
+//		for(int i=1; i<10; i++) {
+//			int result = times * i;
+//			System.out.println(result);
+//		}
+//		
+//		return times;
+//		
+//	}
+//	
 	
 }
