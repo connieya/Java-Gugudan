@@ -185,7 +185,7 @@ public class Gugudan{
  int[] result = calculate(2);
  print(result); 로 해야하는 이유가 있을까??
  
- 
+ ------------------------
 ### 크기가 다른 구구단 구현
 
 * 사용자가 입력한 값에 따라 크기가 다른 구구단을 계산해 출력한다.
