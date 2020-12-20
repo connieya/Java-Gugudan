@@ -186,5 +186,63 @@ public class Gugudan{
  print(result); 로 해야하는 이유가 있을까??
  
  
+### 크기가 다른 구구단 구현
 
+* 사용자가 입력한 값에 따라 크기가 다른 구구단을 계산해 출력한다.
+* 예를 들어 사용자가 "8,7" 과 같은 문자열을 입력하면 팔칠단을 구현한다. 팔칠단은 2x 1,...2 x 7, 3 x 1..3 x'7...,8'x'1....8'x'7까지 구현 하는 것을 의미한다.
+
+
+ `힌트`
+ 
+ * 사용자가 입력한 값을 문자열(String)로 받는다.
+ 
+ ```
+ Scanner scanner = new Scanner(System.in);
+ String inputValue = scanner.nextLine();
+ ```
+ 
+ * 사용자가 입력한 값을 쉽표(,)를 기준으로 분리한다.
+ 
+ ```
+ String[] splitedValue = inputValue.split(",");
+ ```
+ 
+ * 쉼표를 기준으로 분리한 문자열을 숫자로 변환한다.
+ ```
+ int first = Integer.parseInt(splitedValue[0]);
+ int second = Integer.parseInt(splitedValue[1]);
+ ```
+ 
+  `크기가 다른 구구단 구현`
+  
+  ```
+  public static void main(String[] args) {
+			System.out.println("크기가 다른 구구단 숫자 입력 :");
+			Scanner scanner = new Scanner(System.in);
+			while(true) {
+				
+			
+			String inputValue = scanner.nextLine();
+			
+			String[] splitedValue = inputValue.split(",");
+			
+			int first = Integer.parseInt(splitedValue[0]);
+			int second = Integer.parseInt(splitedValue[1]);
+			
+			if(first >1 && second >1) {
+				for(int i=2; i<=first; i++)
+					for(int j=1; j<=second; j++) {
+						System.out.println(i+"*"+j+"= "+i*j);
+					}
+			}else {
+				System.out.println("2이상 입력하세요");
+			}
+			
+			}
+			
+			
+	}
+  ```
+  
+  ![image](https://user-images.githubusercontent.com/66653324/102705052-77744b00-42c6-11eb-9372-523673e8412b.png)
 
